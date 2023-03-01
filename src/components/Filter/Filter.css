@@ -1,0 +1,35 @@
+.filter-container {
+    margin-left:1%;
+    margin-right:1%;
+    /* border:1px solid green; */
+    display:flex;
+    justify-content: space-between;
+    height:200px;
+    flex-basis:100%;
+    /* margin-bottom: 1%; */
+}
+
+.filter-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border:1px silid red;
+    margin-left: 3%;
+}
+
+.filter-area > button {
+    font-size: 20px;
+}
+.search-area {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border:1px silid red;
+    margin-right: 3%;
+}
+.search-area > button {
+    font-size: 20px;
+}
+.search-area > input {
+    font-size: 20px;
+}

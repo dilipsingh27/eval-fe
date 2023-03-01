@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.header {
+    background-color: black;
+    height:10vh;
+}
+
+.para {
+    font-size: 40px;
+    font-family: 'Big Shoulders';
+    color: white;
+    margin-left:10%;
+    /* margin-right:10%; */
+}
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}

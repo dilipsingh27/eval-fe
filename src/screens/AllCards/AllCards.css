@@ -1,0 +1,12 @@
+.cards-container {
+    /* border: 2px solid black; */
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    /* flex:1; */
+    height:100%;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 1%;
+    
+}
