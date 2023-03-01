@@ -82,3 +82,41 @@
     margin-bottom: 20px;
 }
 
+
+
+/* media query */
+
+/*Small screens and laptops*/
+@media screen and (min-width: 769px) and (max-width:1024px)
+{
+    .card{
+        flex-basis: 400px;
+        margin-left: 20%;
+        margin-bottom: 200px;
+    }
+    .card:nth-child(4) {
+        margin-top:100px;
+    }
+
+}
+
+/*ipads and tablets*/
+@media screen and (min-width: 481px) and (max-width:768px)
+{
+   
+}
+
+
+/*Mobile devices*/
+@media screen and (min-width: 320px) and (max-width:480px)
+{
+    .card-holder {
+        margin-top:70px;
+    }
+    .card-owner {
+        width:110px;
+        margin-left: 70px;
+        font-size: 14px;
+    }
+    
+}

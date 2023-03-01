@@ -27,7 +27,7 @@ const Card = ({id,name,imgUrl,description,venue,datetime,isRegistered,areSeatsAv
 
     return (
         
-        <div className='card' onClick={navigateDetails}>
+        <div className='card' onClick={navigateDetails} data-testid = 'card'>
             {/* <div className="image-holder"> */}
             <img src={imgUrl} alt="" />
             {/* </div> */}

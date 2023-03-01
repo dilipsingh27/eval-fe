@@ -39,8 +39,6 @@ const Filter = ({setAllEvents}) => {
     return (
         <div className='filter-container'>
             <div className="filter-area">
-                
-            
                 <button><i className="fa-solid fa-chevron-up"></i>{' '}FILTER</button>
                 <button onClick={handleAll}><i className="fa-solid fa-circle-dot"></i>{' '}ALL</button>
                 <button onClick={handleRegister}><i className="fa-regular fa-circle"></i>{' '}REGISTERED</button>
