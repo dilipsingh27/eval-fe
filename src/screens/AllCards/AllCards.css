@@ -3,10 +3,11 @@
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
-    /* flex:1; */
-    height:100%;
+    flex:1;
+    /* height:100%; */
     flex-wrap:wrap;
     justify-content: space-between;
     margin-top: 1%;
+    margin-bottom: 10%;
     
 }

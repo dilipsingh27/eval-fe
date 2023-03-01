@@ -38,10 +38,12 @@ const AllCards = () => {
                         imgUrl={event.imgUrl}
                         isRegistered={event.isRegistered}  
                         areSeatsAvailable={event.areSeatsAvailable}
+                        setAllEvents={setAllEvents}
                     />
                     );
                 })
             }
+            
             
         </div>
     );

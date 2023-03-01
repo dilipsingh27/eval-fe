@@ -24,6 +24,7 @@ const Card = ({id,name,imgUrl,description,venue,datetime,isRegistered,areSeatsAv
             }});
     };
 
+
     return (
         
         <div className='card' onClick={navigateDetails}>
@@ -52,7 +53,7 @@ const Card = ({id,name,imgUrl,description,venue,datetime,isRegistered,areSeatsAv
                 <div className="registration">
                     
                     {
-                        areSeatsAvailable ? isRegistered ? <button>UNREGISTER</button>: 
+                        areSeatsAvailable ? isRegistered ? <button onClick>UNREGISTER</button>: 
                             <button>REGISTER</button> : <p>No Seats Unavailable</p>
 
                     }
@@ -74,7 +75,8 @@ Card.propTypes = {
     venue: PropTypes.string,
     datetime: PropTypes.string,
     isRegistered: PropTypes.bool,
-    areSeatsAvailable: PropTypes.bool
+    areSeatsAvailable: PropTypes.bool,
+    setAllEvents: PropTypes.func
 };
 
 export default Card;
