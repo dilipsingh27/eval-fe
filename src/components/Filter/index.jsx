@@ -51,6 +51,21 @@ const Filter = ({setAllEvents}) => {
             });
     };
 
+    const handleSeat = () => {
+        makeRequest(GET_EVENTS,{})
+            .then((response) => {
+                const seatAvailableEvent = response.filter(eachEvent => {
+                    if(eachEvent.areSeatsAvailable)
+                        return eachEvent;
+                });
+                // setAllRegisteredEvents(registeredEvent);
+                setAllEvents(seatAvailableEvent);
+            })
+            .catch(() => {
+            
+            });
+    };
+
     return (
         <div className='filter-container'>
             <div className="filter-area">
@@ -62,7 +77,7 @@ const Filter = ({setAllEvents}) => {
             <div className="search-area">
                 <input type="search" />
                 <button onClick={handleBookmark}>BOOKMARKED</button>
-                <button>SEAT AVAILABLE</button>
+                <button onClick={handleSeat}>SEAT AVAILABLE</button>
             </div>
         </div>
     );
