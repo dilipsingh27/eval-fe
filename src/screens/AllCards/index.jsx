@@ -26,7 +26,6 @@ const AllCards = () => {
         <div className="cards-container">
             <Filter setAllEvents={setAllEvents}/>
             {
-                // allSong.map((song,index) => {
                 allEvents.map((event) => {
                     return (<Card 
                        
@@ -37,11 +36,13 @@ const AllCards = () => {
                         venue={event.venue}
                         datetime={event.datetime}
                         imgUrl={event.imgUrl}
-                            
+                        isRegistered={event.isRegistered}  
+                        areSeatsAvailable={event.areSeatsAvailable}
                     />
                     );
                 })
             }
+            
         </div>
     );
 };

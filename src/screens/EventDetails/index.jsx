@@ -31,6 +31,8 @@ const EventDetails = () => {
                     venue={eventDetails.venue}
                     datetime={eventDetails.datetime}
                     imgUrl={eventDetails.imgUrl}
+                    isRegistered={eventDetails.isRegistered}  
+                    areSeatsAvailable={eventDetails.areSeatsAvailable}
                 />
             </div>
         </div>

@@ -2,16 +2,15 @@
     /* border:2px solid black; */
     margin-left: 10%;
     margin-right: 10%;
-    flex:1;
     display: flex;
-    height:90vh;
+    /* height: 70vh; */
     /* flex-direction: row; */
     justify-content: center;
     align-items: center;
 }
 
 .eventDetailContainer {
-    height:80vh;
+    height:600px;
     margin-top: 10px;
     margin-bottom: 10px;
 }

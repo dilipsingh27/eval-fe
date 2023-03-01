@@ -6,6 +6,7 @@
     flex-basis: 300px;
     margin-top: 2%;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .image-holder {
@@ -72,5 +73,12 @@
     margin-left: 3%;
     margin-right: 3%;
    
+}
+
+.registration {
+    display: flex;
+    justify-content: center;
+    height:30px;
+    margin-bottom: 20px;
 }
 

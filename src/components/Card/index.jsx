@@ -5,7 +5,7 @@ import { getFormattedDateFromUtcDate } from '../../utils/common';
 import { useNavigate } from 'react-router-dom';
 
 
-const Card = ({id,name,imgUrl,description,venue,datetime}) => {
+const Card = ({id,name,imgUrl,description,venue,datetime,isRegistered,areSeatsAvailable}) => {
 
     const navigate = useNavigate();
     const navigateDetails = () => {
@@ -17,7 +17,9 @@ const Card = ({id,name,imgUrl,description,venue,datetime}) => {
                     imgUrl,
                     description,
                     venue,
-                    datetime
+                    datetime,
+                    isRegistered,
+                    areSeatsAvailable
                 }
             }});
     };
@@ -40,9 +42,24 @@ const Card = ({id,name,imgUrl,description,venue,datetime}) => {
                     <p>DATE: {getFormattedDateFromUtcDate(datetime)}</p>
                 </div>
                 <div className="card-booking">
-                    <p><i className="fa fa-circle-check"></i>Registered</p>
+                    <p><i className="fa fa-circle-check"></i>{
+                        !areSeatsAvailable?<p>No Seats Available</p>:
+                            isRegistered?<p>Registered</p>:null
+                    }</p>
                     <i className="fa-regular fa-bookmark"></i>
+
                 </div>
+                <div className="registration">
+                    
+                    {
+                        areSeatsAvailable ? isRegistered ? <button>UNREGISTER</button>: 
+                            <button>REGISTER</button> : <p>No Seats Unavailable</p>
+
+                    }
+                    {/* // {isRegistered ? <button>UNREGISTER</button> :<p>No Seat Unavailable</p>} */}
+                </div>
+
+                
             </div>
             
         </div>
@@ -56,6 +73,8 @@ Card.propTypes = {
     description: PropTypes.string,
     venue: PropTypes.string,
     datetime: PropTypes.string,
+    isRegistered: PropTypes.bool,
+    areSeatsAvailable: PropTypes.bool
 };
 
 export default Card;
