@@ -5,6 +5,7 @@ import { getFormattedDateFromUtcDate } from '../../utils/common';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Card = ({id,name,imgUrl,description,venue,datetime,isRegistered,areSeatsAvailable}) => {
 
     const navigate = useNavigate();

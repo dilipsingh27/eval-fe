@@ -2,8 +2,18 @@ import React from 'react';
 import './Filter.css';
 import makeRequest from '../../utils/makeRequest';
 import { GET_EVENTS } from '../../constants/apiEndpoints';
-// import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faMagnifyingGlass,
+    faFilter,
+    faChevronUp,
+    faCircleDot,
+    faCircle,
+    faBookmark,
+  } from '@fortawesome/free-solid-svg-icons';
+  import { faCircle as faHollowCircle } from '@fortawesome/free-regular-svg-icons';
+
 
 const Filter = ({setAllEvents}) => {
     // const [allRegisteredEvents,setAllRegisteredEvents] = useState();
@@ -68,23 +78,90 @@ const Filter = ({setAllEvents}) => {
 
     return (
         <div className='filter-container'>
+
             <div className="filter-area">
-                <button><i className="fa-solid fa-chevron-up"></i>{' '}FILTER</button>
-                <button onClick={handleAll}><i className="fa-solid fa-circle-dot"></i>{' '}ALL</button>
+                <div className="filter">
+                    <div className="filter-icon">
+                        <FontAwesomeIcon icon={faFilter} />
+                    </div>
+                    <div className="filter-text">
+                        <p>FILTER</p>
+                    </div>
+                    <div className="filter-chevron">
+                        <FontAwesomeIcon icon={faChevronUp} />
+                    </div>
+                </div>
+
+                <div className="search-input">
+                    <div className="search-text">
+                        <input type="search" />
+                    </div>
+                    <div className="search-icon">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </div>
+                </div>
+            </div>
+
+        <div className="filter-options">
+            <div className="filter-left">
+                <div className="filter-all">
+                    <div onClick={ handleAll} className="filter-left-icon">
+                        <FontAwesomeIcon icon={faCircleDot} />
+                    </div>
+                    <div className="filter-left-text">
+                        <p>ALL</p>
+                    </div>
+                </div>
+                <div onClick={handleRegister} className="filter-registered">
+                    <div className="filter-left-icon">
+                        <FontAwesomeIcon icon={faHollowCircle} />
+                    </div>
+                    <div className="filter-left-text">
+                        <p>REGISTERED</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div className="filter-right">
+                <div onClick={handleBookmark} className="filter-bookmarked">
+                    <div className="filter-right-text">
+                        <p>BOOKMARKED</p>
+                    </div>
+                    <div className="filter-right-icon">
+                        <FontAwesomeIcon icon={faHollowCircle} />
+                    </div>
+                </div>
+                <div onClick={handleSeat} className="filter-seat-available">
+                    <div className="filter-right-text">
+                        <p>BOOKMARKED</p>
+                    </div>
+                    <div className="filter-right-icon">
+                        <FontAwesomeIcon icon={faHollowCircle} />
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    );
+};
+                
+                 {/* <button onClick={handleAll}><i className="fa-solid fa-circle-dot"></i>{' '}ALL</button>
                 <button onClick={handleRegister}><i className="fa-regular fa-circle"></i>{' '}REGISTERED</button>
             
-            </div>
+        
             <div className="search-area">
                 <input type="search" />
                 <button onClick={handleBookmark}>BOOKMARKED</button>
                 <button onClick={handleSeat}>SEAT AVAILABLE</button>
             </div>
+        
         </div>
     );
-};
+}; */}
 
-Filter.propTypes = {
+{/* Filter.propTypes = {
     setAllEvents: PropTypes.func,
-};
+}; */}
 
 export default Filter;
