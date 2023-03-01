@@ -4,6 +4,7 @@ import AllCards from './screens/AllCards';
 import EventDetails from './screens/EventDetails';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Footer from './components/Footer';
+import ErrorPage from './screens/ErrorPage';
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path="/allEvents" element={<AllCards/>}/>
                     <Route path={'/allEvents/:id'} element={<EventDetails/>} />
+                    <Route path="/error/:errorCode?" element={<ErrorPage />} />
                 </Routes>
                 <Footer/>
             </BrowserRouter>
